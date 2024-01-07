@@ -20,7 +20,6 @@ app.get("/users", (req, res) => {
 
     con.query(query, (err, result) => {
         // NOTE: remove password from result
-
         for (let i = 0; i < result.length; i++) {
             delete result[i].password
         }
